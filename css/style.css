@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --color: #ed143d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+span {
+    color: var(--color);
+    text-align: center;
+}
+
+section {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    padding: 6.5rem 0;
+}
+
+
+.btn {
+    display: inline-block;
+    background: var(--color);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: .7rem 1.5rem;
+    margin-top: 1.2rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--color);
+}
+
+
+.btn:hover {
+    color: var(--color);
+    background: none;
+}
+
+
+.max-width {
+    max-width: 80rem;
+    padding: 0 5rem;
+    margin: auto;
+}
+
+
+section .title {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 3.7rem;
+    padding-bottom: 1.2rem;
+}
+
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 11.2rem;
+    height: .1rem;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+
+section .title::after {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    padding: .5rem;
+    font-size: 1.2rem;
+    color: var(--color);
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+/*---------------------------------------
+NAVBAR STYLING------------------------
+------------------------------------- */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 1.8rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: capitalize;
+}
+
+.navbar.sticky {
+    padding: 1rem 0;
+    background: var(--color);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navbar .logo a span {
+    color: var(--color);
+}
+
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 1.5rem;
+}
+
+.navbar .menu li a:hover {
+    color: var(--color);
+}
+
+
+.navbar.sticky li a:hover {
+    color: #fff;
+}
+
+
+.menu-btn {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    width: 2.6rem;
+    height: 2.8rem;
+    background: var(--color);
+    right: 1.8rem;
+    bottom: .7rem;
+    text-align: center;
+    line-height: 2.8rem;
+    color: #fff;    
+    z-index: 9999;
+    font-size: 1.9rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-up-btn.show {
+    bottom: 1.8rem;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/*---------------------------------------
+HOME SECTION ------------------------
+------------------------------------- */
+
+.home {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    background: url("/images/banner.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 31rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+
+.home .max-width {
+    margin: auto 0 auto 2.5rem;
+}
+
+
+.home .home-content .text-1 {
+    font-size: 1.6rem;
+}
+
+.home .home-content .text-2 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-left: -.3rem;
+}
+
+.home .home-content .text-3 {
+    font-size: 2.5rem;
+    margin: .5rem 0;
+}
+
+.home .home-content .text-3 span {
+    color: var(--color);
+    font-weight: 500;
+}
+
+
+/*---------------------------------------
+ABOUT SECTION ------------------------
+------------------------------------- */
+
+.about {
+    text-transform: capitalize;
+}
+
+.about .title::after {
+    content: 'who i am';
+}
+
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.about .about-content .left {
+    width: 45%;
+}
+
+
+.about .about-content .left img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: .6rem;
+}
+
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .6rem;
+}
+
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+
+/*---------------------------------------
+SERVICES SECTION ------------------------
+------------------------------------- */
+
+.services {
+    text-transform: capitalize;
+    background: #111;
+    color: #fff;
+}
+
+.services .title::before {
+    background: #fff;
+}
+
+.services .title::after {
+    content: 'what i provide';
+    background: #111;
+    padding-top: 0;
+}
+
+.services .services-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services .services-content .card {
+    flex: 1 1 20rem;
+    background: #222;
+    margin: 1rem;
+    padding: 2.2rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.services .services-content .card:hover {
+    transform: scale(1.05);
+    background: var(--color);
+}
+
+.services .services-content .card:hover i {
+    color: #fff;
+}
+
+
+
+.services .services-content .card i {
+    font-size: 3rem;
+    color: var(--color);
+}
+
+.services .services-content p {
+    padding: 1rem 0;
+}
+
+.services .services-content .card .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: .6rem 0 .5rem 0;
+}
+
+
+/*---------------------------------------
+SKILLS SECTION ------------------------
+------------------------------------- */
+.skills .title::after {
+    content: 'what i know';
+    padding-top: 0;
+}
+
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.skills .skills-content .column {
+    width: calc(50% - 1.8rem);
+}
+
+
+.skills .skills-content .left .text {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: .6rem;
+}
+
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+
+
+.skills .skills-content .right .bars {
+    margin-bottom: 1rem;
+}
+
+
+.skills .skills-content .right .bars .info {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+
+.skills .skills-content .right span {
+    font-size: 1.1rem;
+    font-weight: 530;
+    color: initial;
+}
+
+
+.skills .skills-content .right .line {
+    width: 100%;
+    height: .3rem;
+    background: #d3d3d3;
+    position: relative;
+}
+
+
+.skills .skills-content .right .line::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--color);
+}
+
+
+.skills .skills-content .right .html::before {
+    width: 90%;
+}
+
+
+.skills .skills-content .right .css::before {
+    width: 85%;
+}
+
+
+.skills .skills-content .right .js::before {
+    width: 50%;
+}
+
+
+.skills .skills-content .right .php::before {
+    width: 30%;
+}
+
+
+.skills .skills-content .right .mysql::before {
+    width: 20%;
+}
+
+
+.skills .skills-content .btn {
+    font-size: 1.1rem;
+    padding: .4rem 1rem;
+}
+
+
+/*---------------------------------------
+TEAMS SECTION ------------------------
+------------------------------------- */
+.teams {
+    background: #111;
+    color: #fff;
+}
+
+.teams .title::before {
+    background: #fff;
+}
+
+
+
+
+.teams .carousel .card {
+    background: #222;
+    border-radius: .5rem;
+    padding: 1.5rem 2.1rem;
+    cursor: pointer;
+}
+
+.teams .carousel .card:hover {
+    background: var(--color);
+}
+
+
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+
+.teams .carousel .card .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: .6rem 0 .5rem 0;
+}
+
+
+.teams .carousel .card .box img {
+    width: 9.3rem;
+    height: 9.3rem;
+    object-fit: cover;
+    border: .3rem solid var(--color);
+    border-radius: 50%;
+}
+
+.teams .carousel .card:hover img{
+    border-color: #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+
+.owl-dot {
+    width: .8rem;
+    height: .8rem;
+    margin: 0 .5rem;
+    outline: none!important;
+    border: .1rem solid var(--color)!important;
+    border-radius: 50%;
+}
+
+
+.owl-dot.active {
+    width: 2.1rem;
+    border-radius: .7rem;
+}
+
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: var(--color)!important;
+}
+
+
+/*---------------------------------------
+CONTACT SECTION ------------------------
+------------------------------------- */
+
+.contact .title::after {
+    content: 'det in touch';
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 1.8rem);
+}
+
+.contact .contact-content .text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: .6rem;
+    
+}
+
+
+.contact .contact-content .left p {
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+    margin: .6rem 0;
+}
+
+
+.contact .contact-content .row {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+}
+
+
+.contact .contact-content .row .info {
+    margin-left: 1.8rem;
+}
+
+
+.contact .contact-content .row i {
+    font-size: 1.5rem;
+    color: var(--color);
+    cursor: pointer;
+}
+
+.contact .contact-content .row i:hover {
+    transform: scale(1.2);
+}
+
+
+
+.contact .contact-content .info .head {
+    font-weight: 600;
+}
+
+.contact .contact-content .info .sub-title {
+    color: #333;
+} 
+
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    width: 100%;
+    height: 2.8rem;
+    margin-bottom: .9rem;
+}
+
+.contact .right form  .name {
+    margin-right: .6rem;
+}
+
+.contact .right form  .email {
+    margin-left: .6rem;
+}
+
+.contact .right form .field input,
+.contact .right form textarea  {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    border: .1rem solid lightgray;
+    border-radius: .5rem;
+    outline: none;
+    padding: 0 .9rem;
+    font-size: 1rem;
+}       
+
+.contact .right form textarea {
+    height: 5rem;
+}
+
+.contact .right .btn {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/*---------------------------------------
+FOOTER ---------------------------
+------------------------------------- */
+
+footer {
+    font-family: 'Nunito', sans-serif;
+    background: #111;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+
+footer .credit {
+    padding: 1rem;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------
+MEDIA QUERY ------------------------
+------------------------------------- */
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 1104px) {
+
+    .about .about-content .left img {
+        width: 21.8rem;
+        height: 21.8rem;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 3rem;
+    }
+}
+
+
+@media (max-width: 947px) {
+    section {
+        padding: 0 1rem;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before {
+        content: '\f00d';
+
+    }
+
+    .navbar .menu {
+        position: fixed;
+        background: #111;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        padding-top: 5rem;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 1.2rem 0;
+        font-size: 1.5rem;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 4rem;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 2.1rem;
+    }
+
+    .home .home-content a {
+        font-size: 1.4rem;
+        padding: .6rem 1.8rem;
+    }
+
+    .max-width {
+        max-width: 50rem;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 3.7rem;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .title {
+        margin-top: 1.5rem;
+    }
+
+    .skills .skills-content .right .bars {
+        margin-top: 2.5rem;
+    }
+
+    .services .title {
+        padding-top: 1rem;
+    }
+
+    .skills .skills-content .left p,
+    .about .about-content .right p {
+        text-align: initial;
+    }
+
+    .contact .contact-content .column {
+        width: 100%;
+    }
+
+    footer .credit {
+        font-size: 1.1rem;
+    }
+
+}
+
+
+@media (max-width: 690px) {
+
+    .max-width {
+        padding: 0 1.4rem;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 3rem;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 2rem;
+    }
+
+    .home .home-content a {
+        font-size: 1rem;
+    }
+
+    .home .home-content .btn {
+        font-size: 1.1rem;
+        padding: .5rem 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: .5rem .7rem;
+    }
+
+    .skills .skills-content .column {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .max-width {
+        padding: 0 1.4rem;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 2rem;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 1.5rem;
+    }
+
+    .skills .title::after {
+        padding-top: 0;
+    }
+
+    .services .title::after {
+        padding-top: 0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .services .title,
+    .skills .title {
+        font-size: 2rem;
+    }
+
+    .services .title::after,
+    .skills .title::after {
+        font-size: .9rem;
+        padding: 0 0 0.9rem 0;
+        font-weight: 500;
+    }
+
+}
+
+
+/* ---------------------------------------
+END --------------------------------
+------------------------------------- */
